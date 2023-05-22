@@ -54,25 +54,16 @@
                   />
                 </div>
                 <div class="form-group">
-                  <label>Nama Bank</label>
-                  <select
-                    class="form-control select2"
-                    style="width: 100%"
-                    name="nameBank"
+                  <label for="bankName">Nama bank</label>
+                  <input
+                    type="text"
+                    name="bankName"
+                    value="<%= bank.bankName %>"
+                    class="form-control"
+                    id="bankName"
+                    placeholder="Masukan nama bank"
                     required
-                  >
-                    <option selected="selected">pilih bank</option>
-                    <option value="BCA" <% if (bank.nameBank == "BCA") { %>
-                     Selected
-                    <% } %>>BCA</option>
-                    <option value="MANDIRI" <% if (bank.nameBank == "MANDIRI") { %>
-                     Selected
-                    <% } %>>MANDIRI</option>
-                    <option value="BRI" <% if (bank.nameBank == "BRI") { %>
-                     Selected
-                    <% } %>
-                    >BRI</option>
-                  </select>
+                  />
                 </div>
                 <div class="form-group">
                   <label for="noRekening">Nomor Rekening</label>
