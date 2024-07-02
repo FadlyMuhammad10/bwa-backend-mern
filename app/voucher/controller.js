@@ -151,7 +151,7 @@ module.exports = {
 
         src.on("end", async () => {
           try {
-            const voucher = await Voucher.findOne({ _id: id });
+            let voucher = await Voucher.findOne({ _id: id });
             let currentImage = `${config.rootPath}/public/uploads/${voucher.thumbnail}`;
             if (fs.existsSync(currentImage)) {
               fs.unlinkSync(currentImage);
